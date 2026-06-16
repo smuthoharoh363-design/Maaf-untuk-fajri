@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Untuk Muhammad Fajri ❤️</title>
+
+<style>
+
+body{
+margin:0;
+padding:0;
+background:linear-gradient(to bottom,#ffd6e7,#fff);
+font-family:Arial;
+text-align:center;
+overflow:hidden;
+}
+
+.container{
+padding:30px;
+position:relative;
+z-index:2;
+}
+
+img{
+width:250px;
+border-radius:20px;
+box-shadow:0 0 20px pink;
+}
+
+h1{
+color:#ff2f6d;
+}
+
+p{
+font-size:18px;
+padding:15px;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+margin:10px;
+}
+
+#yes{
+background:#ff2f6d;
+color:white;
+}
+
+#no{
+background:#ddd;
+}
+
+.heart{
+position:fixed;
+top:-20px;
+color:red;
+font-size:25px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💖 Muhammad Fajri Sayangku 💖</h1>
+
+<img src="FOTO_KAMU.jpg">
+
+<p>
+Aku minta maaf atas semua kesalahanku.
+Aku sadar mungkin aku membuatmu kecewa.
+Tapi percayalah, aku sangat menyayangimu.
+Semoga kamu mau memaafkanku.
+❤️
+</p>
+
+<audio controls autoplay loop>
+<source src="sempurna.mp3" type="audio/mpeg">
+</audio>
+
+<br><br>
+
+<button id="yes"
+onclick="alert('Terima kasih sayangku ❤️ Aku janji akan lebih baik lagi.')">
+Maafin Aku ❤️
+</button>
+
+<button id="no">
+Gak 😭
+</button>
+
+</div>
+
+<script>
+
+setInterval(()=>{
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=
+(Math.random()*3+2)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},5000);
+
+},300);
+
+const no=document.getElementById("no");
+
+no.addEventListener("mouseover",()=>{
+
+let x=Math.random()*
+(window.innerWidth-100);
+
+let y=Math.random()*
+(window.innerHeight-100);
+
+no.style.position="absolute";
+no.style.left=x+"px";
+no.style.top=y+"px";
+
+});
+
+</script>
+
+</body>
+</html>
